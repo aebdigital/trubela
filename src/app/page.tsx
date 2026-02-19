@@ -23,12 +23,12 @@ const process = [
 ];
 
 const galleryImages = [
-  '/images/gallery/gallery-7.jpg',
-  '/images/gallery/gallery-8.jpg',
-  '/images/gallery/gallery-9.jpg',
-  '/images/gallery/gallery-10.jpg',
-  '/images/gallery/gallery-11.jpg',
-  '/images/gallery/gallery-12.jpg',
+  '/cele%20interiery/6c168d2d-48dc-4c1a-b0c3-9b0a94985c1e%202.JPG',
+  '/cele%20interiery/b621a02e-1784-4826-8d16-7725cbf70f48%202.JPG',
+  '/calunenie/8673abc6-0fb8-40a0-8d81-419407b18449%202.JPG',
+  '/zavesy/3e734b39-3013-42a3-8c93-e63c29fd96d8%202.JPG',
+  '/zavesy/6176079a-d8be-4548-9574-f6c285860622%202.JPG',
+  '/Starozitnosti/591601c1-ebd3-402b-b88e-c6eae09cdc0c%202.JPG',
 ];
 
 export default function Home() {

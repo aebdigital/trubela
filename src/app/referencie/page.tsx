@@ -1,8 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import CTASection from '@/components/CTASection';
+import Lightbox from '@/components/Lightbox';
 
 const categories = [
   { id: 'all', label: 'Všetko' },
@@ -94,11 +95,19 @@ const galleryItems = [
 
 export default function ReferenciePage() {
   const [activeCategory, setActiveCategory] = useState('all');
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const filteredItems = activeCategory === 'all'
     ? galleryItems
     : galleryItems.filter(item => item.category === activeCategory);
+
+  const columns = useMemo(() => {
+    const cols: typeof filteredItems[] = [[], [], [], []];
+    filteredItems.forEach((item, i) => {
+      cols[i % 4].push(item);
+    });
+    return cols;
+  }, [filteredItems]);
 
   return (
     <>
@@ -148,23 +157,31 @@ export default function ReferenciePage() {
       {/* Gallery Grid */}
       <section className="py-16 bg-white">
         <div className="w-[95vw] mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredItems.map((item, index) => (
-              <div
-                key={index}
-                className="group relative aspect-[4/3] overflow-hidden bg-gray-100 cursor-pointer"
-                onClick={() => setSelectedImage(item.src)}
-              >
-                <Image
-                  src={item.src}
-                  alt={item.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-white font-heading font-bold">{item.title}</p>
-                </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {columns.map((col, colIndex) => (
+              <div key={colIndex} className="flex flex-col gap-4">
+                {col.map((item) => {
+                  const flatIndex = filteredItems.indexOf(item);
+                  return (
+                    <div
+                      key={item.src}
+                      className="group relative overflow-hidden bg-gray-100 cursor-pointer"
+                      onClick={() => setLightboxIndex(flatIndex)}
+                    >
+                      <Image
+                        src={item.src}
+                        alt={item.title}
+                        width={800}
+                        height={600}
+                        className="w-full h-auto group-hover:scale-105 transition-all duration-500"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <p className="text-white font-heading font-bold">{item.title}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             ))}
           </div>
@@ -174,29 +191,13 @@ export default function ReferenciePage() {
       <CTASection />
 
       {/* Lightbox */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <button
-            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors"
-            onClick={() => setSelectedImage(null)}
-          >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          <div className="relative max-w-5xl max-h-[85vh] w-full h-full">
-            <Image
-              src={selectedImage}
-              alt="Gallery image"
-              fill
-              className="object-contain"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
-        </div>
+      {lightboxIndex !== null && (
+        <Lightbox
+          images={filteredItems.map(item => item.src)}
+          currentIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onNavigate={(index) => setLightboxIndex(index)}
+        />
       )}
     </>
   );

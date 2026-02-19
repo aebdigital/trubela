@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { services } from '@/data/services';
 import CTASection from '@/components/CTASection';
 import ServiceSidebar from '@/components/ServiceSidebar';
 import AnimatedServiceContent from '@/components/AnimatedServiceContent';
+import ServiceGallery from '@/components/ServiceGallery';
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
@@ -56,7 +56,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <ServiceSidebar services={services} />
 
             <AnimatedServiceContent>
-              <div className="max-w-3xl">
+              <div className="w-full">
                 <p className="text-sm tracking-widest text-gray-400 mb-4 uppercase">
                   {service.description}
                 </p>
@@ -68,12 +68,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     {service.detail}
                   </p>
                 </div>
-                <Link
-                  href="/kontakt"
-                  className="inline-block mt-10 bg-black text-white px-10 py-4 text-sm tracking-wide hover:bg-gray-800 transition-colors rounded-full font-medium"
-                >
-                  OBJEDNAŤ SLUŽBU
-                </Link>
+
+                {/* Mini Gallery */}
+                {service.gallery && service.gallery.length > 0 && (
+                  <ServiceGallery images={service.gallery} title={service.title} />
+                )}
               </div>
             </AnimatedServiceContent>
           </div>

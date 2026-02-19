@@ -101,21 +101,19 @@ export default function KontaktPage() {
                   <div>
                     <p className="font-heading font-bold mb-4">Otváracie hodiny</p>
                     <div className="space-y-2 text-gray-600">
-                      <div className="flex justify-between max-w-[200px]">
-                        <span>Pondelok - Piatok</span>
+                      <div>
+                        <span className="font-medium">Pondelok - Piatok</span>
                       </div>
-                      <div className="mb-2 block">9:00 - 17:00</div>
+                      <div className="mb-3">8:00 - 12:00 &nbsp; 13:00 - 17:00</div>
 
-                      <div className="flex justify-between max-w-[200px]">
-                        <span>Sobota</span>
+                      <div>
+                        <span className="font-medium">Sobota, Nedeľa</span>
                       </div>
-                      <div className="mb-2 block">9:00 - 12:00</div>
-
-                      <div className="flex justify-between max-w-[200px]">
-                        <span>Nedeľa</span>
-                      </div>
-                      <div className="block">Zatvorené</div>
+                      <div className="mb-3">Zatvorené</div>
                     </div>
+                    <p className="mt-4 text-sm text-gray-500 italic">
+                      Pred návštevou je nutné si dohodnúť termín.
+                    </p>
                   </div>
                 </div>
               </div>
