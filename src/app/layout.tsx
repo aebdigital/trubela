@@ -3,6 +3,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import CookieConsent from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
   title: "TRUBELA | Dekorácie a Čalúnenie od roku 1994",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Navigation />
         <main>{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );
