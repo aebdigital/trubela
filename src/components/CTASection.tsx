@@ -12,7 +12,7 @@ export default function CTASection() {
                 />
                 <div className="absolute inset-0 bg-black/70" />
             </div>
-            <div className="relative z-10 w-[95vw] mx-auto px-6 lg:px-8 text-center">
+            <div className="relative z-10 w-[90vw] mx-auto px-4 lg:px-8 text-center">
                 <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                     Navštívte Náš Showroom
                 </h2>

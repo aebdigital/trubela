@@ -41,7 +41,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         </div>
-        <div className="relative z-10 w-[95vw] mx-auto px-6 lg:px-8 pb-12">
+        <div className="relative z-10 w-[90vw] mx-auto px-4 lg:px-8 pb-12">
           <p className="text-sm tracking-widest text-gray-300 mb-3 uppercase">SLUŽBY</p>
           <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white">
             {service.title}
@@ -51,7 +51,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
       {/* Content with sidebar */}
       <section className="py-16 lg:py-24 bg-white">
-        <div className="w-[95vw] mx-auto px-6 lg:px-8">
+        <div className="w-[90vw] mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
             <ServiceSidebar services={services} />
 

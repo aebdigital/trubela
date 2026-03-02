@@ -55,7 +55,7 @@ export default function HeroSlideshow() {
       ))}
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative z-10 w-[95vw] mx-auto px-6 lg:px-8 pt-20">
+      <div className="relative z-10 w-[90vw] mx-auto px-4 lg:px-8 pt-20">
         <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white max-w-4xl leading-tight mb-6">
           TVORÍME DOMOV PODĽA VAŠICH PREDSTÁV
         </h1>

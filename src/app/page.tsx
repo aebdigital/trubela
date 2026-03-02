@@ -40,7 +40,7 @@ export default function Home() {
 
       {/* Process Section */}
       <section className="py-20 lg:py-32 bg-gray-50">
-        <div className="w-[95vw] mx-auto px-6 lg:px-8">
+        <div className="w-[90vw] mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-16">
             <div>
               <p className="text-sm tracking-widest text-gray-500 mb-4">POSTUP</p>
@@ -70,7 +70,7 @@ export default function Home() {
 
       {/* Gallery Preview Section */}
       <section className="py-20 lg:py-32 bg-black text-white">
-        <div className="w-[95vw] mx-auto px-6 lg:px-8">
+        <div className="w-[90vw] mx-auto px-4 lg:px-8">
           <div className="mb-12">
             <p className="text-sm tracking-widest text-gray-400 mb-4">REFERENCIE</p>
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold max-w-2xl">
@@ -104,7 +104,7 @@ export default function Home() {
 
       {/* About Section */}
       <section id="o-nas" className="py-20 lg:py-32 bg-white">
-        <div className="w-[95vw] mx-auto px-6 lg:px-8">
+        <div className="w-[90vw] mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">
             <div>
               <p className="text-sm tracking-widest text-gray-500 mb-4">O NÁS</p>
