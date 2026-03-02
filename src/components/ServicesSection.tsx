@@ -5,7 +5,7 @@ import { services } from '@/data/services';
 export default function ServicesSection() {
   return (
     <section id="sluzby" className="py-20 lg:py-32 bg-white">
-      <div className="w-[90vw] mx-auto px-4 lg:px-8">
+      <div className="w-[90vw] mx-auto px-0 lg:px-8">
         <div className="mb-12">
           <p className="text-sm tracking-widest text-gray-500 mb-4">SLUŽBY</p>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold">

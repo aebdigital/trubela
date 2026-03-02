@@ -36,7 +36,7 @@ export default function Navigation() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/70 to-transparent">
-        <div className="w-[90vw] mx-auto px-4 lg:px-8">
+        <div className="w-[90vw] mx-auto px-0 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="font-heading text-2xl font-bold tracking-tight text-white hover:opacity-80 transition-opacity">

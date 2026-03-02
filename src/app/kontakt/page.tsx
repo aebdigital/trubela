@@ -52,7 +52,7 @@ export default function KontaktPage() {
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>
-        <div className="relative z-10 w-[90vw] mx-auto px-4 lg:px-8 mt-20">
+        <div className="relative z-10 w-[90vw] mx-auto px-0 lg:px-8 mt-20">
           <p className="text-sm tracking-widest text-gray-300 mb-4 uppercase">Kontakt</p>
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-3xl">
             Spojte Sa S Nami
@@ -65,7 +65,7 @@ export default function KontaktPage() {
 
       {/* Contact Info + Form Section */}
       <section className="py-16 bg-white">
-        <div className="w-[90vw] mx-auto px-4 lg:px-8">
+        <div className="w-[90vw] mx-auto px-0 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
             {/* Contact Information */}
             <div>

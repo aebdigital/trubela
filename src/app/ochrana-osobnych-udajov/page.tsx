@@ -16,7 +16,7 @@ export default function OchranaOsobnychUdajovPage() {
                     />
                     <div className="absolute inset-0 bg-black/60" />
                 </div>
-                <div className="relative z-10 w-[90vw] mx-auto px-4 lg:px-8 mt-20">
+                <div className="relative z-10 w-[90vw] mx-auto px-0 lg:px-8 mt-20">
                     <p className="text-sm tracking-widest text-gray-300 mb-4 uppercase">DOKUMENTY</p>
                     <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-3xl">
                         Ochrana osobných údajov
@@ -26,7 +26,7 @@ export default function OchranaOsobnychUdajovPage() {
 
             {/* Content Section */}
             <section className="py-20 bg-white">
-                <div className="w-[90vw] max-w-4xl mx-auto px-4 lg:px-8">
+                <div className="w-[90vw] max-w-4xl mx-auto px-0 lg:px-8">
                     <div className="prose prose-lg max-w-none text-gray-600 space-y-8">
                         <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 mb-12">
                             <h2 className="text-xl font-bold text-black mb-4">Prevádzkovateľ</h2>

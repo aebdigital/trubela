@@ -123,7 +123,7 @@ export default function ReferenciePage() {
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
-        <div className="relative z-10 w-[90vw] mx-auto px-4 lg:px-8">
+        <div className="relative z-10 w-[90vw] mx-auto px-0 lg:px-8">
           <p className="text-sm tracking-widest text-gray-300 mb-4">REFERENCIE</p>
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-3xl">
             Naša Práca Hovorí Za Nás
@@ -136,7 +136,7 @@ export default function ReferenciePage() {
 
       {/* Filter Section */}
       <section className="py-8 bg-white border-b border-gray-200">
-        <div className="w-[90vw] mx-auto px-4 lg:px-8">
+        <div className="w-[90vw] mx-auto px-0 lg:px-8">
           <div className="flex flex-wrap gap-4">
             {categories.map((category) => (
               <button
@@ -156,7 +156,7 @@ export default function ReferenciePage() {
 
       {/* Gallery Grid */}
       <section className="py-16 bg-white">
-        <div className="w-[90vw] mx-auto px-4 lg:px-8">
+        <div className="w-[90vw] mx-auto px-0 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {columns.map((col, colIndex) => (
               <div key={colIndex} className="flex flex-col gap-4">
