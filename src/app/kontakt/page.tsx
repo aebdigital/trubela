@@ -137,6 +137,9 @@ export default function KontaktPage() {
                   {/* Opening Hours */}
                   <div>
                     <p className="font-heading font-bold mb-4">Otváracie hodiny</p>
+                    <p className="mb-6 text-sm font-bold text-black bg-gray-50 p-4 border-l-4 border-black rounded-r-lg shadow-sm">
+                      Pred návštevou je nutné si dohodnúť termín aby sme sa mohli venovať výhradne Vám.
+                    </p>
                     <div className="space-y-3 text-gray-600">
                       <div>
                         <span className="font-medium text-black">Pondelok - Piatok</span>
@@ -147,9 +150,6 @@ export default function KontaktPage() {
                         <p>Zatvorené</p>
                       </div>
                     </div>
-                    <p className="mt-6 text-sm text-gray-400 italic bg-gray-50 p-4 border-l-2 border-black rounded-r-lg">
-                      Pred návštevou je nutné si dohodnúť termín telefonicky alebo emailom.
-                    </p>
                   </div>
                 </div>
               </div>

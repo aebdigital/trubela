@@ -8,7 +8,7 @@ const process = [
   {
     number: '01.',
     title: 'Konzultácia',
-    description: 'Počas návštevy našej pobočky zistíme Vaše požiadavky a ukážeme Vám možnosti z našich vzoriek v showroome.',
+    description: 'Počas návštevy nášho ateliéru zistíme Vaše požiadavky a ukážeme Vám možnosti z našich vzoriek v showroome.',
   },
   {
     number: '02.',
