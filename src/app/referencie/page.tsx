@@ -91,6 +91,7 @@ const galleryItems = [
   { src: '/Starozitnosti/e3ffdb76-2538-4af5-9f4f-49dc2d02344e%202.JPG', category: 'starozitnosti', title: 'Starožitnosti' },
   { src: '/Starozitnosti/eee4d321-484e-4825-ad81-8e4328c2e5da%202.JPG', category: 'starozitnosti', title: 'Starožitnosti' },
   { src: '/Starozitnosti/f9b5e52d-5e45-4072-8fc8-faed05bd5998%202.JPG', category: 'starozitnosti', title: 'Starožitnosti' },
+  { src: '/Starozitnosti/IMG_4213.webp', category: 'starozitnosti', title: 'Starožitnosti' },
 ];
 
 export default function ReferenciePage() {

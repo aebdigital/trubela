@@ -68,6 +68,7 @@ export const services: Service[] = [
       '/Starozitnosti/165465b9-3a2b-4f02-b49c-7b8c3c086dbf%202.JPG',
       '/Starozitnosti/1ac1926d-1e0b-4ce3-b1e0-434bbe34a5dd%202.JPG',
       '/Starozitnosti/1ac46e72-1fc3-4c4a-9ee5-64bfb6c3bf9d%202.JPG',
+      '/Starozitnosti/IMG_4213.webp',
     ],
   },
   {
